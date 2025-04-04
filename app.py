@@ -4,6 +4,10 @@ from openai import OpenAI
 
 app = Flask(__name__)
 
+@app.route("/healthz")
+def healthz():
+    return "OK", 200
+
 @app.route("/")
 def talk_to_nim():
     api_key = os.getenv("API_KEY", "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")
