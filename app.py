@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def talk_to_nim():
-    api_key = os.getenv("API_KEY")
+    api_key = os.getenv("API_KEY", "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")
     if not api_key:
         return jsonify({"error": "API_KEY not found"}), 500
 
