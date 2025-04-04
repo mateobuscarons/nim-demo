@@ -29,5 +29,5 @@ def talk_to_nim():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)  # Ensure this is set to 0.0.0.0 for external access
+    app.run(host="0.0.0.0", port=8012)  # Ensure this is set to 0.0.0.0 for external access
 
