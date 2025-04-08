@@ -4,10 +4,6 @@ from openai import OpenAI
 
 app = Flask(__name__)
 
-@app.route("/healthz")
-def healthz():
-    return "OK", 200
-
 @app.route("/")
 def talk_to_nim():
     api_key = os.getenv("API_KEY", "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")
@@ -33,5 +29,5 @@ def talk_to_nim():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8012)  # Ensure this is set to 0.0.0.0 for external access
+    app.run(host="0.0.0.0", port=8012)
 
